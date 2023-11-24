@@ -115,21 +115,30 @@ if (!$conn) {
         $insertQuery = "INSERT INTO registration (username,password, email,phone ) VALUES ('$username', '$password', '$email', '$phone')";
         
         if ($conn->query($insertQuery) === TRUE) {
-            echo "Registration successful. You can now log in.";
+          
+          echo"
+          <script>
+         alert('you are sucessfully registered')
+          </script>
+           ";
+           header("Location: login.php");
         } else {
             echo "Error: " . $insertQuery . "<br>" .mysqli_error($conn);
         }
-    }
-    if ($count==1){
-        header("Location:home.php");
-        echo'alert("You are redirected to login!!!!!")';
-    }
-    else {
-        echo  '<script>
-                    window.location.href = "reg.php";
-                    alert("Please enter the details!!")
-                </script>';
-    }
+
+      }
+    // }
+    // if ($count==1){
+    //     header("Location:home.php");
+    //     echo'alert("You are redirected to login!!!!!")';
+    // }
+    // else {
+    //     echo  '<script>
+    //                 window.location.href = "reg.php";
+    //                 alert("Please enter the details!!")
+    //             </script>';
+    //       }
+  }
 }
-}
+
 ?>
