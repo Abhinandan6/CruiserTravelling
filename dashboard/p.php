@@ -42,17 +42,19 @@ $conn->close();
             </div>
 
             <ul class="navigation">
-                <li><i class="fa-solid fa-house"></i> Home</li>
-                <li><i class="fa-solid fa-boxes-stacked"></i> Services</li>
-                <li><i class="fa-solid fa-user"></i> Customers</li>
-                <li><i class="fa-solid fa-chart-simple"></i> Stats</li>
-                <!-- <li><i class="fa-regular fa-user"></i> Add Hotels</li> -->
+                <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="admin_view.php"><i class="fa-solid fa-boxes-stacked"></i> Rooms Info</a></li>
+                <li><a href="add_room_admin.php"><i class="fa-solid fa-user"></i> Add Rooms</a></li>
+                <li><a href="remove_room_admin.php"><i class="fa-solid fa-chart-simple"></i> Remove Rooms</a></li>
+                <li><a href="confirmed_bookings.php"><i class="fa-solid fa-chart-simple"></i> Confirmed Rooms</a></li>
+                <li><a href="booking_history.php"><i class="fa-regular fa-user"></i> Booking History</a></li>
                 <li><a href="p.php"><i class="fa-regular fa-user"></i> Add Hotels</a></li>
-                <li><i class="fa-solid fa-money-bill"></i> Refunds</li>
+                <li> <a href="dashboard.php"><i class="fa-solid fa-money-bill"></i> Refunds </a></li>
             </ul>
 
 
         </div>
+
 
 
 
@@ -99,12 +101,24 @@ $conn->close();
                     <tbody>
                         <?php foreach ($products as $product): ?>
                             <tr>
-                                <td><?php echo $product['id']; ?></td>
-                                <td><?php echo $product['name']; ?></td>
-                                <td><?php echo $product['price']; ?></td>
-                                <td><?php echo $product['description']; ?></td>
-                                <td><?php echo $product['services']; ?></td>
-                                <td><?php echo $product['image']; ?></td>
+                                <td>
+                                    <?php echo $product['id']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $product['name']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $product['price']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $product['description']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $product['services']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $product['image']; ?>
+                                </td>
                                 <td>
                                     <?php if (!empty($product['image_path'])): ?>
                                         <img src="<?php echo $product['image_path']; ?>" alt="Product Image" height="50">
@@ -162,7 +176,7 @@ $conn->close();
     </main>
 
 
-    
+
     <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

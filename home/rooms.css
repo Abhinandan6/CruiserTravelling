@@ -2,83 +2,214 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-a {
+    font-family: poppins;
+  }
+  a {
     text-decoration: none;
     color: black;
   }
-.header {
-    width: 100%;
-    height: 70px;
-    /* background-color: red; */
-    padding: 0px 15%;
+  #header {
+    width: 100% !important;
+    height: 70px !important;
+    /* background-color: lightgrey; */
+    padding: 0px 15% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  
+  #logo {
+    width: 10% !important;
+    height: 70px !important;
+    /* background-color: yellow; */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #logo-text {
+    width: 80%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "poppins";
+  }
+  
+  .nav-links {
+    width: 100% !important;
+    height: 70px !important;
+    /* background-color: yellow; */
+    list-style-type: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    font-family: "poppins" !important;
+  }
+  
+  .nav-link {
+    padding: 5px 10px !important;
+    transition: 0.3s !important;
+    color: black !important;
+  }
+  
+  .nav-link:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .desc {
+    background-color: #dfdfed;
+    display: block;
+    padding: 5%;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+  
+  .cards {
+    background-color: #dfdfed;
+    display: inline;
+    align-items: center;
+    padding: 5%;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+  .card {
+    margin-left: 50px;
+    align-items: center;
+    display: inline;
+  }
+  .card-text{
+      font-family: poppins;
+  }
+  .card:hover {
+    box-shadow: 1px 5px 7px 1px rgba(37, 33, 33, 0.2);
+  }
+  .col-md-1 {
+    display: contents;
+    margin: 5px;
+  }
+  /* FOOTER */
+  
+  footer {
+    height: 100px;
+  }
+  
+  footer .container {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-
-}
-
-.logo {
-    width: 10%;
-    height: 70px;
-    /* background-color: yellow; */
+    height: 100%;
+    font-family: poppins;
+  }
+  
+  .left {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-}
-
-.nav-links {
-    width: 100%;
-    height: 70px;
+  }
+  
+  .right {
     /* background-color: yellow; */
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: "poppins";
+  }
+  
+  footer .container ul li {
+    display: inline-block;
+  }
+  
+  footer .container ul li a {
+    margin-right: 10px;
+  }
+  .input{
+    width: 130px;
+    margin-bottom: 10px;
+  }
+  label{
+    margin-bottom: 10px;
+  }
+  
+  i{
+    padding: 20px;
+      background: black;
+      color: white;
+      border-radius: 10px;
+      margin: 10px;
+  }
+  /* rooms css  */
+  .rooms {
+    width: 100%;
+    padding: 50px 15%;
+    background-color: #eeeeee;
     font-family: 'poppins';
-
-}
-
-.nav-link {
-    padding: 5px 10px;
-    transition: .3s;
-}
-
-.nav-link:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
-a:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
-.container {
     display: flex;
-}
-
-.desc {
-    /* background-color: blue; */
-    display: block;
+    flex-direction: column;
     align-items: center;
-}
-
-.cards {
-    background-color: aqua;
-    display: inline;
-    align-items: center;
-}
-.card{
-    margin-left: 50 px;
-    align-items: center;
-    display: inline;
-}
-.col-md-1 {
-    display: contents;
-    margin: 5px;
-}
+  }
+  
+  .section-title {
+    font-size: 30px;
+  }
+  
+  .rooms-area {
+    width: 100%;
+    padding: 20px 0px;
+    /* background-color: red; */
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 50px;
+  }
+  .rooms{
+    font-family: poppins;
+    padding: 5%;
+    border-radius: 30px;
+    margin-top: 20px;
+  
+  }
+  
+  .room {
+    width: 30%;
+    background-color: white;
+  
+  }
+  
+  .room-img {
+    height: 270px;
+    width: 100%;
+    /* background-color:yellow; */
+    overflow: hidden;
+  }
+  
+  .room-image {
+    width: 100%;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .room-image:hover {
+    transform: scale(1.5);
+  }
+  
+  .room-details {
+    /* background-color: green; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }

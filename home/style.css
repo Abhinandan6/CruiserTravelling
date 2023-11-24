@@ -33,7 +33,6 @@ a {
 .header {
   width: 100%;
   height: 70px;
-  /* background-color: red; */
   padding: 0px 15%;
   display: flex;
   justify-content: space-between;
@@ -41,15 +40,14 @@ a {
 
 }
 
-.logo {
-  width: 10%;
-  height: 70px;
+#logo {
+  width: 10% !important;
+  height: 70px !important;
   /* background-color: yellow; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .logo-text {
@@ -400,4 +398,29 @@ input {
 
 .gall-img:hover {
   opacity: 1 !important;
+}
+.container{
+  display: flex;
+  
+}
+.right{
+  width: 100%;
+  height: 70px;
+  /* background-color: yellow; */
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'poppins';
+
+}
+/* footer  */
+.footer {
+  width: 100%;
+  height: 70px;
+  padding: 0px 15%;
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+
 }

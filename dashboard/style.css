@@ -4,6 +4,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 
 .main 
 {
@@ -226,6 +229,7 @@ th
 {
     padding: 20px 0px;  
     text-align: center;
+    color: #fff;
 }
 
 td
@@ -233,4 +237,10 @@ td
     border-top: 1px solid #161616;  
     padding: 20px 0px;  
     text-align: center;
+}
+label{
+    color: black;
+}
+.modal-title{
+    color: #000;
 }
