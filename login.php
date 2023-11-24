@@ -104,6 +104,7 @@ header {
 }
 
 .input-field .input {
+  color: black;
   height: 45px;
   width: 87%;
   border: none;

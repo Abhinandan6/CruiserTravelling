@@ -45,6 +45,7 @@ input[type="password"],
 input[type="email"],
 input[type="tel"],
 button {
+  color: white;
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
