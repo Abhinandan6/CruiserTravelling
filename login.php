@@ -104,6 +104,7 @@ header {
 }
 
 .input-field .input {
+  color: black;
   height: 45px;
   width: 87%;
   border: none;
@@ -172,7 +173,8 @@ if (!$conn) {
 }else{
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
+    $password = $_POST["password"];
+
 
     $sql = "SELECT * FROM registration WHERE username = '$username' AND password = '$password'";  
     $result = mysqli_query($conn, $sql);  

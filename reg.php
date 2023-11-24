@@ -45,6 +45,7 @@ input[type="password"],
 input[type="email"],
 input[type="tel"],
 button {
+  color: white;
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
@@ -100,7 +101,7 @@ if (!$conn) {
 }else{
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT); // Hash the password
+    $password = $_POST["password"]; // Hash the password
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     
@@ -116,21 +117,30 @@ if (!$conn) {
         $insertQuery = "INSERT INTO registration (username,password, email,phone ) VALUES ('$username', '$password', '$email', '$phone')";
         
         if ($conn->query($insertQuery) === TRUE) {
-            echo "Registration successful. You can now log in.";
+          
+          echo"
+          <script>
+         alert('you are sucessfully registered')
+          </script>
+           ";
+           header("Location: login.php");
         } else {
             echo "Error: " . $insertQuery . "<br>" .mysqli_error($conn);
         }
-    }
-    if ($count==1){
-      echo'alert("You are redirected to login!!!!!")';
-        header("Location:home.php");
-    }
-    else {
-        echo  '<script>
-                    window.location.href = "reg.php";
-                    alert("Please enter the details!!")
-                </script>';
-    }
+
+      }
+    // }
+    // if ($count==1){
+    //     header("Location:home.php");
+    //     echo'alert("You are redirected to login!!!!!")';
+    // }
+    // else {
+    //     echo  '<script>
+    //                 window.location.href = "reg.php";
+    //                 alert("Please enter the details!!")
+    //             </script>';
+    //       }
+  }
 }
-}
+
 ?>
