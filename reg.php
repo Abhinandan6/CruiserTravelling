@@ -50,6 +50,7 @@ button {
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
+  color: white;
 }
 
 button {
@@ -121,8 +122,8 @@ if (!$conn) {
         }
     }
     if ($count==1){
+      echo'alert("You are redirected to login!!!!!")';
         header("Location:home.php");
-        echo'alert("You are redirected to login!!!!!")';
     }
     else {
         echo  '<script>

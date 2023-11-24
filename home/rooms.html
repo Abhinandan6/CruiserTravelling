@@ -32,6 +32,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      function validate() {
+        if(document.querySelector("input").length>0){
+          alert("Room Sucessfully Booked");
+        }else{
+          alert("enter the details");
+        }
+        
+      }
+    </script>
   </head>
 
   <body>
@@ -106,49 +116,37 @@
                   <i class="fa-solid fa-wifi"> wifi</i><br />
                   <i class="fa-solid fa-tv"> tv</i><br />
                   <i class="fa-solid fa-bowl-food"> food</i><br />
-                  <i class="fa-solid fa-water-ladder"> ladder</i><br />
-                  <i class="fa-solid fa-bed"> bedrooms</i><br />
                   <i class="fa-solid fa-shower"> shower</i><br />
-                  <i class="fa-solid fa-fan"> Air conditioner</i><br />
                 </div>
-               -->
-
-                <div class="services">
-                  <h4>Services</h4>
-                  <div class="container-fluid">
+            -->
+            
+            <div class="services">
+                <h4>Services</h4>
+                <div class="container-fluid">
                     <div class="row">
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-wifi"> wifi</i><br />
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-tv"> tv</i><br />
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-bowl-food"> food</i><br />
-                      </div>
+                        <div class="col-md-4">
+                            <i class="fa-solid fa-wifi"> wifi</i><br />
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fa-solid fa-tv"> tv</i><br />
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fa-solid fa-bowl-food"> food</i><br />
+                        </div>
                     </div>
-
+                    
                     <div class="row">
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-wifi"> wifi</i><br />
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-tv"> tv</i><br />
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-bowl-food"> food</i><br />
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-wifi"> wifi</i><br />
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-tv"> tv</i><br />
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa-solid fa-bowl-food"> food</i><br />
+                        <div class="col-md-4">
+                            <i class="fa-solid fa-bed"> bedrooms</i><br />
+                            <!-- <i class="fa-solid fa-wifi"> wifi</i><br /> -->
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fa-solid fa-water-ladder"> pool</i><br />
+                            <!-- <i class="fa-solid fa-tv"> tv</i><br /> -->
+                        </div>
+                        <div class="col-md-4">
+                          <i class="fa-solid fa-fan"> Air conditioner</i><br />
+                        <!-- <i class="fa-solid fa-bowl-food"> food</i><br /> -->
                       </div>
                     </div>
                   </div>
@@ -160,7 +158,7 @@
                   <div class="row">
                     <div class="card" style="width: 18rem">
                       <div class="card-body">
-                        <h5 class="card-title">NEW YEAR OFFER!!!</h5>
+                        <h5 class="card-title">Diwali Offer!!!</h5>
                         <table>
                           <tr>
                             <td>
@@ -170,7 +168,7 @@
                               <input
                                 type="date"
                                 name="check_in"
-                                class="input"
+                                class="input" required
                               />
                             </td>
                           </tr>
@@ -182,7 +180,7 @@
                               <input
                                 type="date"
                                 name="check_in"
-                                class="input"
+                                class="input" required
                               />
                             </td>
                           </tr>
@@ -194,7 +192,7 @@
                               <input
                                 type="number"
                                 name="no_of_ppl"
-                                class="input"
+                                class="input" required
                               />
                             </td>
                           </tr>
@@ -202,10 +200,10 @@
                         <p class="card-text">
                           You can book your desied room by clicking this button
                         </p>
-                        <a href="#" class="btn  btn-danger">BOOK NOW!!!</a>
+                        <button type="submit" class="btn  btn-danger" onclick="validate()">Book Now</button>
                         <hr class="featurette-divider" />
                         <p><b>Total Price :</b></p>
-                        <h4><b>Rs 25999</b></h4>
+                        <h4><b>Rs 2599</b></h4>
                       </div>
                     </div>
                   </div>

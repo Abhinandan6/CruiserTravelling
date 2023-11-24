@@ -108,7 +108,7 @@ header {
   width: 87%;
   border: none;
   border-radius: 30px;
-  color: #000;
+  color: black;
   font-size: 15px;
   padding: 0 0 0 45px;
   background: rgba(255, 255, 255, 0.1);
@@ -172,9 +172,9 @@ if (!$conn) {
 }else{
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";  
+    $sql = "SELECT * FROM registration WHERE username = '$username' AND password = '$password'";  
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
     $count = mysqli_num_rows($result);  
