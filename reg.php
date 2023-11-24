@@ -99,7 +99,7 @@ if (!$conn) {
 }else{
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT); // Hash the password
+    $password = $_POST["password"]; // Hash the password
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     
