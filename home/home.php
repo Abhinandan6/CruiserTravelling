@@ -126,8 +126,8 @@
             The company itself is a very successful company. For us and similar offices times, but.
           </p>
           <button class="btn">
-            Know More
-          </button>
+          <a href="rooms.php"> Know More</a>
+          </button>
         </div>
       </div>
 
@@ -142,8 +142,8 @@
             The company itself is a very successful company. For us and similar offices times, but.
           </p>
           <button class="btn">
-            Know More
-          </button>
+          <a href="rooms.php"> Know More</a>
+          </button>
         </div>
       </div>
 
@@ -158,8 +158,8 @@
             The company itself is a very successful company. For us and similar offices times, but.
           </p>
           <button class="btn">
-            Know More
-          </button>
+          <a href="rooms.php"> Know More</a>
+          </button>
         </div>
       </div>
 
@@ -174,8 +174,8 @@
             The company itself is a very successful company. For us and similar offices times, but.
           </p>
           <button class="btn">
-            Know More
-          </button>
+          <a href="rooms.php"> Know More</a>
+          </button>
         </div>
       </div>
 
@@ -190,8 +190,8 @@
             The company itself is a very successful company. For us and similar offices times, but.
           </p>
           <button class="btn">
-            Know More
-          </button>
+          <a href="rooms.php"> Know More</a>
+          </button>
         </div>
       </div>
 
@@ -206,8 +206,8 @@
             The company itself is a very successful company. For us and similar offices times, but.
           </p>
           <button class="btn">
-            Know More
-          </button>
+          <a href="rooms.php"> Know More</a>
+          </button>
         </div>
       </div>
 
