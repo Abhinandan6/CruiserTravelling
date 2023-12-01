@@ -22,12 +22,13 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Management</title>
+    <title>Add Hotels</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../images/logo.jpg" />
 </head>
 
 <body>
@@ -95,10 +96,20 @@ $conn->close();
                             <th>Price</th>
                             <th>Description</th>
                             <th>Services</th>
-                            <th>Image</th>
+                            <th>Image path</th>
+                            <th>Images</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Taj Hotel</td>
+                            <td>2000</td>
+                            <td>Premium hotels</td>
+                            <td>wifi,pool,tv, food</td>
+                            <td>C:\xampp\htdocs\CruiserTravelling\dashboard\p.php</td>
+                            <td><img src="../images/room6.jpg" alt="Hotel image" width="100px"></td>
+                        </tr>
                         <?php foreach ($products as $product): ?>
                             <tr>
                                 <td>
@@ -117,11 +128,11 @@ $conn->close();
                                     <?php echo $product['services']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $product['image']; ?>
+                                    <?php echo $product['image_path']; ?>
                                 </td>
                                 <td>
                                     <?php if (!empty($product['image_path'])): ?>
-                                        <img src="<?php echo $product['image_path']; ?>" alt="Product Image" height="50">
+                                        <img src="<?php echo $product['image_path']; ?>" alt="Product Image" height="50px">
                                     <?php endif; ?>
                                 </td>
                             </tr>
@@ -175,7 +186,14 @@ $conn->close();
 
     </main>
 
-
+<style>
+    table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    color: #fff;
+}
+</style>
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
     <script src="./index.js"></script>

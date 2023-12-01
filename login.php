@@ -16,6 +16,17 @@
         alert("Login Succesful");
     } 
   </script> -->
+  <script>
+      function validate() 
+      { 
+          if(document.getElementById("Username").value.length==0 || document.getElementById("Password").value.length==0) 
+          {
+              alert("Enter username and password"); 
+          }
+          else 
+              alert("Login Succesful"); 
+      } 
+      </script>
 
   <title>Login Page</title>
 </head>
@@ -34,9 +45,9 @@
 
           <div class="input-field">
 
-            <input type="text" class="input" placeholder="Username" name="username" />
+            <input type="text" class="input" placeholder="Username" name="username" id="Username" />
             <i class="bx bx-user"></i>
-            <input type="Password" class="input" placeholder="Password" name="password" />
+            <input type="Password" class="input" placeholder="Password" name="password"  id="Password"/>
             <i class="bx bx-lock-alt"></i>
             <button type="submit" class="submit" name="submit" id="btn">
               <label for="btn">Submit</label>

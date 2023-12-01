@@ -189,7 +189,7 @@
   }
   
   .room-img {
-    height: 270px;
+    height: 100px;
     width: 100%;
     /* background-color:yellow; */
     overflow: hidden;
@@ -201,9 +201,6 @@
     transition: .3s;
   }
   
-  .room-image:hover {
-    transform: scale(1.5);
-  }
   
   .room-details {
     /* background-color: green; */

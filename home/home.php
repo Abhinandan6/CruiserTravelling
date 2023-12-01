@@ -80,8 +80,8 @@
         </div>
 
         <div class="inp">
-          <button class="btn book-btn">
-            Book Now
+          <button class="btn book-btn" onclick="#rooms" >
+           <a href="#rooms">Check Now</a>
           </button>
         </div>
 
